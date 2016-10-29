@@ -1,0 +1,118 @@
+
+
+CREATE DATABASE UCMCISPROJECT;
+CREATE USER 'cisadmin'@'localhost' IDENTIFIED BY 'cisadmin';
+GRANT ALL PRIVILEGES ON *.* TO 'cisadmin'@'localhost' WITH GRANT OPTION;
+SHOW DATABASES;
+USE UCMCISPROJECT;
+
+SHOW tables;
+
+CREATE TABLE IF NOT EXISTS Registration (
+   id int(30) NOT NULL PRIMARY KEY,
+   firstName VARCHAR(30) NOT NULL,
+   lastName VARCHAR(30) NOT NULL,
+   emailAddress VARCHAR(30) NOT NULL,
+   address VARCHAR(300) NOT NULL,
+   gender VARCHAR(7) NOT NULL,
+   password VARCHAR(30) NOT NULL,
+   createdate DATETIME NOT NULL,
+   updatedate DATETIME NOT NULL
+);
+INSERT INTO Profile (firstNme,lastName,emailID,password,re_password,dob,gender,start_date,last_update_on) 
+VALUES ('Raghupathi', 'Thota', 'abc@ucmo.edu','123456','123456','2008-7-04','Male',CURDATE(),CURDATE());
+
+SELECT * FROM Profile;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+******************************************************
+******************************************************
+*****************************************************
+DVDRentals project
+
+CREATE DATABASE OnlineDVDRentals;
+    
+    CREATE USER 'admin'@'localhost' IDENTIFIED BY 'admin';
+
+GRANT ALL PRIVILEGES ON OnlineDVDRentals.* TO 'admin'@'localhost';
+
+FLUSH PRIVILEGES;
+
+CREATE TABLE DVDCollection (
+   id int(37) NOT NULL PRIMARY KEY,
+   DVDCategory VARCHAR(20) NOT NULL,
+   DVDName VARCHAR(30) NOT NULL,
+   DVDDescription VARCHAR(300) NOT NULL,
+   DVDPrice float NOT NULL,
+   imagePath VARCHAR(300) NOT NULL,
+   createdate DATETIME NOT NULL,
+   updatedate DATETIME NOT NULL
+);
+
+http://www.codeproject.com/Articles/830529/Integrating-Full-Text-Search-to-Spring-MVC-with-Hi
+http://hans-knowledgebase.blogspot.com/
+
+
+CREATE DATABASE OnlineDVDRentals;
+    
+    CREATE USER 'admin'@'localhost' IDENTIFIED BY 'admin';
+
+GRANT ALL PRIVILEGES ON OnlineDVDRentals.* TO 'admin'@'localhost';
+
+FLUSH PRIVILEGES;
+
+select *  from DVDCollection;
+CREATE TABLE DVDCollection (
+   id int(37) NOT NULL PRIMARY KEY ,
+   DVDCategory VARCHAR(20) NOT NULL,
+   DVDName VARCHAR(30) NOT NULL,
+   DVDDescription VARCHAR(300) NOT NULL,
+   DVDPrice float NOT NULL,
+   imagePath VARCHAR(300) NOT NULL,
+   createdate DATETIME NOT NULL,
+   updatedate DATETIME NOT NULL
+);
+
+CREATE TABLE Registration (
+   id int(30) NOT NULL PRIMARY KEY,
+   firstName VARCHAR(30) NOT NULL,
+   lastName VARCHAR(30) NOT NULL,
+   emailAddress VARCHAR(30) NOT NULL,
+   address VARCHAR(300) NOT NULL,
+   gender VARCHAR(7) NOT NULL,
+   password VARCHAR(30) NOT NULL,
+   createdate DATETIME NOT NULL,
+   updatedate DATETIME NOT NULL
+);
+
+select *  from DVDCollection;
+
+UPDATE DVDCollection
+SET imagePath = 'images/forrest_gump_w1.jpg'
+WHERE id =1 and id = 3;
+
+DELETE from DVDCollection where id>0;
